@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.href.includes(`/blogweb.github.io/`)) {
+    if (window.location.href.includes(`/`)) {
       const form = document.getElementById('post-form');
       const postsContainer = document.getElementById('posts');
   
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   
       renderPosts();
-    } else if (window.location.href.includes(`/blogweb.github.io/post.html`)) {
+    } else if (window.location.href.includes(`/post.html`)) {
       const postDetailsContainer = document.getElementById('post-details');
       const deleteButton = document.getElementById('delete-button');
       
