@@ -1,6 +1,6 @@
-const baseUrl = 'https://saro-dev.github.io/blogweb.github.io';
+
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.pathname === `${baseUrl}/`)) {
+    if (window.location.pathname === `/blogweb.github.io/`)) {
       const form = document.getElementById('post-form');
       const postsContainer = document.getElementById('posts');
   
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   
       renderPosts();
-    } else if (window.location.pathname.includes(`${baseUrl}/post.html`)) {
+    } else if (window.location.pathname.includes(`/blogweb.github.io/post.html`)) {
       const postDetailsContainer = document.getElementById('post-details');
       const deleteButton = document.getElementById('delete-button');
       
