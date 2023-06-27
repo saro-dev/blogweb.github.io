@@ -18,13 +18,13 @@ function savePostsToLocalStorage(posts) {
 }
 
 // Get posts from local storage
-function getPostsFromLocalStorage() {
-  if (isLocalStorageAvailable()) {
-    const storedPosts = localStorage.getItem('posts');
-    return storedPosts ? JSON.parse(storedPosts) : [];
-  }
-  return [];
-}
+// function getPostsFromLocalStorage() {
+//   if (isLocalStorageAvailable()) {
+//     const storedPosts = localStorage.getItem('posts');
+//     return storedPosts ? JSON.parse(storedPosts) : [];
+//   }
+//   return [];
+// }
 
 // Create a new post
 function createPost(title, description, image, video) {
@@ -145,6 +145,15 @@ function displayFullPost() {
       postContainer.appendChild(deleteButton);
     }
   }
+}
+
+// Get posts from local storage
+function getPostsFromLocalStorage() {
+  if (isLocalStorageAvailable()) {
+    const storedPosts = localStorage.getItem('posts');
+    return storedPosts ? JSON.parse(storedPosts) : [];
+  }
+  return [];
 }
 
 
