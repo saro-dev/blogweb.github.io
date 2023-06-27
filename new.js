@@ -164,7 +164,7 @@ form.addEventListener('submit', function (e) {
 });
 
 // Check the current page and execute corresponding code
-if (window.location.pathname === '/blogweb.github.io/' || window.location.pathname === '/blogweb.github.io/index.html') {
+if (window.location.href.includes('/blogweb.github.io/') || window.location.pathname === '/blogweb.github.io/index.html') {
   displayPosts();
 } else if (window.location.pathname.includes('/blogweb.github.io/post.html')) {
   displayFullPost();
