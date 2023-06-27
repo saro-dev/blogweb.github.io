@@ -1,6 +1,6 @@
 const baseUrl = 'https://saro-dev.github.io/blogweb.github.io';
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.pathname === `${baseUrl}/index.html`)) {
+    if (window.location.pathname === `${baseUrl}/`)) {
       const form = document.getElementById('post-form');
       const postsContainer = document.getElementById('posts');
   
