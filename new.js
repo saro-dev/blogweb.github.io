@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.pathname === '/') {
+    if (window.location.pathname === '/blogweb.github.io') {
       const form = document.getElementById('post-form');
       const postsContainer = document.getElementById('posts');
   
