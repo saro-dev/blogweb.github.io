@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const deleteButton = document.getElementById('delete-button');
       
   
-      const postId = new URLSearchParams(window.href.search).get('id');
+      const postId = new URLSearchParams(window.location.search).get('id');
   
       let posts = [];
   
