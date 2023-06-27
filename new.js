@@ -18,13 +18,13 @@ function savePostsToLocalStorage(posts) {
 }
 
 // Get posts from local storage
-// function getPostsFromLocalStorage() {
-//   if (isLocalStorageAvailable()) {
-//     const storedPosts = localStorage.getItem('posts');
-//     return storedPosts ? JSON.parse(storedPosts) : [];
-//   }
-//   return [];
-// }
+function getPostsFromLocalStorage() {
+  if (isLocalStorageAvailable()) {
+    const storedPosts = localStorage.getItem('posts');
+    return storedPosts ? JSON.parse(storedPosts) : [];
+  }
+  return [];
+}
 
 // Create a new post
 function createPost(title, description, image, video) {
@@ -102,6 +102,7 @@ function createPostElement(post, index) {
 
   return postElement;
 }
+
 // Display the full post on the post.html page
 function displayFullPost() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -109,9 +110,9 @@ function displayFullPost() {
 
   if (postId !== null) {
     const posts = getPostsFromLocalStorage();
+    const post = posts[postId];
 
-    if (postId >= 0 && postId < posts.length) {
-      const post = posts[postId];
+    if (post) {
       const postContainer = document.getElementById('post-container');
       postContainer.innerHTML = '';
 
@@ -146,16 +147,6 @@ function displayFullPost() {
     }
   }
 }
-
-// Get posts from local storage
-function getPostsFromLocalStorage() {
-  if (isLocalStorageAvailable()) {
-    const storedPosts = localStorage.getItem('posts');
-    return storedPosts ? JSON.parse(storedPosts) : [];
-  }
-  return [];
-}
-
 
 // Event listener for submitting a new post
 const form = document.getElementById('post-form');
